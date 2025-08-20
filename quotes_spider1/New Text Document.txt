@@ -1,0 +1,874 @@
+Type the below commands in terminal and obeserve the output and actions:
+-------------------------------------------------------------------------
+
+scrapy  (If not installed proceed with next instruction)
+----------
+pip install scrapy
+------
+scrapy (Explore various options)  (Scrapy 2.13.3 - no active project)
+---------------
+scrapy version
+-------------------
+scrapy startproject quotes_spider   (Check for folder structure created)
+
+Check for the below Message:
+
+You can start your first spider with:
+    cd quotes_spider
+    scrapy genspider example example.com
+
+scrapy (Scrapy 2.13.3 - no active project)
+----------------------------------
+cd quotes_spider
+
+scrapy (Scrapy 2.13.3 - active project: quotes_spider)
+
+------------------------------------------
+Usage:
+  scrapy <command> [options] [args]
+
+scrapy genspider quotes quotes.toscrape.com 
+
+Observation:
+Created spider 'quotes' using template 'basic' in module:
+  quotes_spider.spiders.quotes
+
+(Check for folder structure created in spyder folder)
+
+Open quotes.py file and explore in editor (A default spyder templete is created)
+------------------------------------------
+
+-> Now we shall extract info from website: https://quotes.toscrape.com/ like "Title" and "Tags" 
+
+In terminal: scrapy shell (observe the output)
+In scrapy Shell:
+--> fetch("https://quotes.toscrape.com/")
+
+Observation:
+2025-08-18 17:30:50 [scrapy.core.engine] INFO: Spider opened
+
+2025-08-18 17:30:51 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://quotes.toscrape.com/robots.txt> (referer: None)
+
+2025-08-18 17:30:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://quotes.toscrape.com/> (referer: None)
+
+-> now inspect the web-page to inspect the element for "https://quotes.toscrape.com/", in out case these are title "Quotes to Scrape" and "Top Ten tags sections elements"
+
+
+In scrapy Shell: response   (You get: <200 https://quotes.toscrape.com/>)
+
+As we want to scrape text "Quotes to Scrape" 
+--------------------------------------------
+
+In scrapy Shell: response.xpath('//h1')
+[<Selector query='//h1' data='<h1>\n                    <a href="/" ...'>]
+
+Now we go 'a' tag:
+In scrapy Shell: response.xpath('//h1/a')
+[<Selector query='//h1/a' data='<a href="/" style="text-decoration: n...'>]
+
+Now we extract text from 'a' tag:
+In scrapy Shell: response.xpath('//h1/a/text()')
+[<Selector query='//h1/a/text()' data='Quotes to Scrape'>]
+
+Now we get rid of selectors from xpath:
+In scrapy Shell: response.xpath('//h1/a/text()').extract()
+['Quotes to Scrape']  Note: this is a list
+
+To get the first element in the list:
+In scrapy Shell: response.xpath('//h1/a/text()').extract_first()
+'Quotes to Scrape'
+
+Now we shall extract second data points:
+-----------------------------------------
+In scrapy Shell: response.xpath('//*[@class="tag"]')            #  ('//*[@id=""]')
+
+[<Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/change/page...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/deep-though...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/thinking/pa...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/world/page/...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/abilities/p...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/choices/pag...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/inspiration...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/life/page/1...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/live/page/1...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/miracle/pag...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/miracles/pa...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/aliteracy/p...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/books/page/...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/classic/pag...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/humor/page/...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/be-yourself...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/inspiration...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/adulthood/p...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/success/pag...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/value/page/...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/life/page/1...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/love/page/1...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/edison/page...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/failure/pag...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/inspiration...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/paraphrased...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/misattribut...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/humor/page/...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/obvious/pag...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" href="/tag/simile/page...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 28px...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 26px...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 26px...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 24px...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 22px...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 14px...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 10px...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 8px"...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 8px"...'>, <Selector query='//*[@class="tag"]' data='<a class="tag" style="font-size: 6px"...'>]
+
+Above hs more than 10 items which is not good, thus we need an another level of data filtering/isolation.
+
+In scrapy Shell: response.xpath('//*[@class="tag-item"]')
+
+[<Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>, <Selector query='//*[@class="tag-item"]' data='<span class="tag-item">\n            <...'>]
+
+In scrapy Shell: len(response.xpath('//*[@class="tag-item"]'))
+10
+
+In scrapy Shell: response.xpath('//*[@class="tag-item"]/a')
+
+[<Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 28px...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 26px...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 26px...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 24px...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 22px...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 14px...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 10px...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 8px"...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 8px"...'>, <Selector query='//*[@class="tag-item"]/a' data='<a class="tag" style="font-size: 6px"...'>]
+
+In scrapy Shell: response.xpath('//*[@class="tag-item"]/a/text()')
+
+[<Selector query='//*[@class="tag-item"]/a/text()' data='love'>, <Selector query='//*[@class="tag-item"]/a/text()' data='inspirational'>, <Selector query='//*[@class="tag-item"]/a/text()' data='life'>, <Selector query='//*[@class="tag-item"]/a/text()' data='humor'>, <Selector query='//*[@class="tag-item"]/a/text()' data='books'>, <Selector query='//*[@class="tag-item"]/a/text()' data='reading'>, <Selector query='//*[@class="tag-item"]/a/text()' data='friendship'>, <Selector query='//*[@class="tag-item"]/a/text()' data='friends'>, <Selector query='//*[@class="tag-item"]/a/text()' data='truth'>, <Selector query='//*[@class="tag-item"]/a/text()' data='simile'>]
+
+In scrapy Shell: response.xpath('//*[@class="tag-item"]/a/text()').extract()
+['love', 'inspirational', 'life', 'humor', 'books', 'reading', 'friendship', 'friends', 'truth', 'simile']
+
+----------------------------------------------
+
+Now copy both the "title" and " top ten tags " into the spyder folder and run.
+
+----------------------------------------------------------
+
+Case 2: Extracting quotes, Authors, Tags and navigating through multiple pages (We shall reuse the previous spyder that extracted h1 tag and tags):
+
+In scrapy Shell: scrapy shell 'http://quotes.toscrape.com/'
+
+2025-08-20 07:06:36 [scrapy.core.engine] INFO: Spider opened
+2025-08-20 07:06:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://quotes.toscrape.com> (referer: None)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Now Visit http://quotes.toscrape.com/ and inspect to check where all the "quotes, Authors, Tags" resides it will be in "div tag and class attribute quotes".
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In scrapy Shell: response.xpath('//*[@class="quote"]') (used to extract card selector)
+
+[<Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>, <Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>]
+
+Description of Xpath:
+
+response.xpath: It applies an XPath query on the HTML content of the response. Returns a SelectorList (a list of Selector objects), which can be further processed.
+
+// Means: Select nodes anywhere in the document (search globally, not just from the root). So it looks through the entire HTML.
+
+* Wildcard: matches any tag (e.g., <div>, <span>, <p>, etc.).
+
+[@class="quote"] Condition (predicate): select only elements whose class attribute equals "quote".
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Now copy this xpath to spyder fileas: quotes = response.xpath('//*[@class="quote"]')
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Optional: 
+
+In scrapy Shell: quotes = response.xpath('//*[@class="quote"]')
+
+In scrapy Shell: quote =  quotes[0]
+
+In scrapy Shell: quote
+<Selector query='//*[@class="quote"]' data='<div class="quote" itemscope itemtype...'>
+
+In scrapy Shell: quote.extract()   (output will be html dump of first <div class="quote")
+
+'<div class="quote" itemscope itemtype="http://schema.org/CreativeWork">\n        <span class="text" itemprop="text">â€œThe world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.â€</span>\n        <span>by <small class="author" itemprop="author">Albert Einstein</small>\n        <a href="/author/Albert-Einstein">(about)</a>\n        </span>\n        <div class="tags">\n            Tags:\n            <meta class="keywords" itemprop="keywords" content="change,deep-thoughts,thinking,world"> \n            \n            <a class="tag" href="/tag/change/page/1/">change</a>\n            \n            <a class="tag" href="/tag/deep-thoughts/page/1/">deep-thoughts</a>\n            \n            <a class="tag" href="/tag/thinking/page/1/">thinking</a>\n            \n            <a class="tag" href="/tag/world/page/1/">world</a>\n            \n        </div>\n    </div>'
+
+
+Note: Thus you can use for loop to iterate through the quotes to extract data of intrest.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Now we shall extract individual card item info : quotes, Authors, Tags. For this we use custom selector(quote.xpath) not the global selector (response.xpath). 
+
+In scrapy Shell: quote.xpath('.//a') Note: . is used before // indicates custom selec
+
+[<Selector query='.//a' data='<a href="/author/Albert-Einstein">(ab...'>, <Selector query='.//a' data='<a class="tag" href="/tag/change/page...'>, <Selector query='.//a' data='<a class="tag" href="/tag/deep-though...'>, <Selector query='.//a' data='<a class="tag" href="/tag/thinking/pa...'>, <Selector query='.//a' data='<a class="tag" href="/tag/world/page/...'>]
+
+Now inspect the page for quotes in first card. 
+
+In scrapy Shell: quote.xpath('.//*[@class="text"]')
+
+[<Selector query='.//*[@class="text"]' data='<span class="text" itemprop="text">â€œT...'>]
+
+In scrapy Shell: quote.xpath('.//*[@class="text"]').extract()
+
+['<span class="text" itemprop="text">â€œThe world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.â€</span>']
+
+In scrapy Shell: quote.xpath('.//*[@class="text"]/text()').extract()
+
+['â€œThe world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.â€']
+
+In scrapy Shell: quote.xpath('.//*[@class="text"]/text()').extract_first()
+
+'â€œThe world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.â€'
+
+In scrapy Shell: print(quote.xpath('.//*[@class="text"]/text()').extract_first())
+
+â€œThe world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.â€
+
+Now we will assign this to a variable and put in our spyder script inside the for loop.
+
+text = quote.xpath('.//*[@class="text"]/text()').extract_first()
+
+Note(optional): 2n way of extracting data
+
+--> text = quote.xpath('.//*[@itemproop="text"]/text()').extract_first()
+
+you will get the same quote output.
+
+text = quote.xpath('//*[@itemproop="text"]/text()').extract_first()
+you will get the same quote output.
+
+text = quote.xpath('//*[@itemproop="text"]/text()').extract()
+you will get the ten quote output.
+
+
+~~~~~~~~~~~~~~~~~~~~
+Next we extract the autors from cards:
+
+In scrapy Shell: quote.xpath('.//*[@itemprop="author"]/text()').extract_first()
+
+'Albert Einstein'
+
+Now we will assign this to a variable and put in our spyder script inside the for loop.
+
+author = quote.xpath('.//*[@itemprop="author"]/text()').extract_first()
+
+~~~~~~~~~~~~~~~~~~~~
+Next we extract the tags from cards:
+
+In scrapy Shell: quote.xpath('.//*[@itemprop="keywords"]/text()').extract_first()
+
+Note: Return nothing as data is inside the content as key value pair so 
+
+In scrapy Shell: quote.xpath('.//*[@itemprop="keywords"]/@content').extract_first()
+
+'change,deep-thoughts,thinking,world'
+
+Now we will assign this to a variable and put in our spyder script inside the for loop.
+
+tags = quote.xpath('.//*[@itemprop="keywords"]/@content').extract_first()
+
+~~~~~~~~~~~~~~~~~~~~
+Next we extract the next page link from cards:
+
+Inspect the page for next page link:
+
+In scrapy Shell: response.xpath('//*[@class="next"]')
+
+[<Selector query='//*[@class="next"]' data='<li class="next">\n                <a ...'>]
+
+In scrapy Shell: response.xpath('//*[@class="next"]/a')
+
+[<Selector query='//*[@class="next"]/a' data='<a href="/page/2/">Next <span aria-hi...'>]
+
+In scrapy Shell: response.xpath('//*[@class="next"]/a/@href')
+
+[<Selector query='//*[@class="next"]/a/@href' data='/page/2/'>]
+
+In scrapy Shell: response.xpath('//*[@class="next"]/a/@href').extract_first()
+
+'/page/2/'
+
+Now we will assign this to a variable and put in our spyder script outside the for loop.
+
+next_page_url = response.xpath('//*[@class="next"]/a/@href').extract_first()
+absolute_next_page_url = response.urljoin(next_page_url)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Note:
+Using print in Scrapy:
+-----------------------
+	--> print() just outputs to your console (for debugging).
+	--> The data is not saved, not returned, not passed to Scrapyâ€™s pipelines or output files.
+	--> see quotes printed in the terminal, but Scrapy wonâ€™t store them in your output.
+	--> Use print() for debugging.
+
+Using yield in Scrapy:
+-----------------------
+	--> yield is used to return scraped data or new requests back to Scrapy.
+	--> Scrapy takes what you yield and:
+		--> Sends it to the Item Pipeline (if itâ€™s data)
+		--> Or schedules another request (if itâ€™s a new URL request)
+	-->Use yield when you want Scrapy to store data or follow links.
+
+
+Key Difference:
+
+Feature             | print()                           | yield
+--------------------|-----------------------------------|---------------------------------------------
+Purpose             | For debugging (just displays data)| Passes data/requests to Scrapy engine
+Persistence         | Data is not saved                 | Data is saved to output (CSV, JSON, DB, etc.)
+Integration         | Does not interact with Scrapy     | Fully integrated with Scrapy workflow
+Output in file      | Not possible                      | Possible (scrapy crawl spider -o data.json)
+When to use         | While testing or debugging        | When you want to store data or follow links
+------------------------------------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Using yeild to save in a file use:
+
+In scrapy Shell: scrapy crawl quotes -o items.csv
+In scrapy Shell: scrapy crawl quotes -o items.json
+In scrapy Shell: scrapy crawl quotes -o items.xml
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Scrapy Architecture:
+--------------------
+
+1. scrapy.cfg:
+   -----------
+	--> Itâ€™s a project-level configuration file created automatically when you start a Scrapy project (scrapy startproject <name>).
+	--> Think of it as the entry point where Scrapy knows:
+		--> Which project you are working on
+		--> Where to find its settings
+		--> How to deploy the project (if you use Scrapyd)
+	--> This file usually lives at the root of the Scrapy project folder.
+	--> Without this file, Scrapy wouldnâ€™t know how to connect your commands to your project.
+
+'''''''' code - start ''''''''''''
+
+# Automatically created by: scrapy startproject
+#
+# For more information about the [deploy] section see:
+# https://scrapyd.readthedocs.org/en/latest/deploy.html
+
+[settings]
+default = quotes_spider.settings
+
+[deploy]
+#url = http://localhost:6800/
+project = quotes_spider
+
+''''''''''' code - End '''''''''''
+
+[settings] Section:
+------------------
+	--> default â†’ the default settings for this project.
+	--> quotes_spider.settings â†’ this points to settings.py inside the quotes_spider package.
+	--> Thatâ€™s where Scrapy will look for project-specific configurations (like User-Agent, pipelines, download delay, etc.).
+
+[deploy] Section:
+----------------
+	--> This is used when you want to deploy your spider to a Scrapy server (Scrapyd).
+	--> url (commented out here) â†’ the Scrapyd server address where youâ€™d deploy your spider.
+	--> project â†’ the project name, here itâ€™s quotes_spider.
+	--> If you want to run your spider on a server instead of your local machine, youâ€™d fill in the url and then use scrapyd-deploy.
+	
+In a nutshell:
+--------------
+scrapy.cfg = Project configuration file.
+[settings] = Where Scrapy finds settings.
+[deploy] = Used if you deploy with Scrapyd.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2. __init__.py:
+   -----------
+What it is:
+	--> __init__.py is like a flag that says: â€œThis folder is a Python package, not just a normal directory.â€
+	--> In Python, any folder containing __init__.py is treated as a package. Without it, Python will treat the folder as a normal directory, not as a module/package.
+
+Role of __init__.py in Scrapy:
+	--> When you create a Scrapy project using: scrapy startproject quotes_spider1
+
+Your project structure looks like this:
+
+'''''''' code - start ''''''''''''
+quotes_spider1/
+    scrapy.cfg
+    quotes_spider1/
+        __init__.py
+        items.py
+        middlewares.py
+        pipelines.py
+        settings.py
+        spiders/
+            __init__.py
+            example_spider.py
+
+'''''''' code - ends ''''''''''''
+In two location we see "__init__.py":
+
+1. "myproject/__init__.py"
+	--> In the above directory structure we see "__init__.py" inside "quotes_spider1/" Makes the quotes_spider1 folder a Python package.
+	--> This allows Scrapy to import settings, pipelines, etc., using:
+			"from quotes_spider1 import settings"
+
+2. "myproject/spiders/__init__.py"
+	--> Makes the spiders folder a Python package.
+	--> This allows Scrapy to discover and import spider classes from there.
+	
+Whatâ€™s inside __init__.py?
+	--> Often itâ€™s an empty file.
+	--> But you can also use it to:
+	--> Define package-level variables.
+	--> Import certain classes/functions for easier access.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3. items.py:
+   ---------
+	--> items.py is a file automatically created when you start a Scrapy project.
+	--> It defines data structures (containers) for the information you scrape.
+	--> These structures are like schemas in databases or models in Django.
+	--> Using Items ensures your scraped data is organized, consistent, and validated before being sent to pipelines or output files.
+
+Working:
+	--> A spider extracts raw data from a webpage.
+	--> Instead of yielding plain Python dictionaries, you yield an Item object (defined in items.py).
+	--> The Item flows through the pipelines (cleaning, validation, saving to DB, etc.).
+
+When you start a new project the Default items.py:
+
+'''''''' code - start ''''''''''''
+import scrapy
+
+class QuotesSpiderItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    pass
+'''''''' code - end ''''''''''''
+
+Defining Fields: We replace the pass with your own fields. Example for a quotes_spider1 project:
+---------------
+
+'''''''' code - start ''''''''''''
+import scrapy
+
+
+class QuotesSpiderItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    h1_tag = scrapy.Field()
+    tags = scrapy.Field()
+	
+'''''''' code - end ''''''''''''
+
+How to use items in our spyder: 
+------------------------------
+
+'''''''' code - start ''''''''''''
+
+# -*- coding: utf-8 -*-
+import scrapy
+from quotes_spider.items import QuotesSpiderItem
+
+class QuotesSpider(scrapy.Spider):
+    name = "quotes"
+    start_urls = ["http://quotes.toscrape.com"]
+
+    def parse(self, response):
+        item = QuotesSpiderItem()
+        # Extract the <h1> tag text
+        item['h1_tag'] = response.xpath('//h1/a/text()').get()
+        # Extract all tags from the sidebar
+        item['tags'] = response.xpath('//*[@class="tag-item"]/a/text()').getall()
+        yield item
+
+		
+'''''''' code - end''''''''''''
+
+Using item and itemloader:
+--------------------------
+
+'''''''' code - start ''''''''''''
+# -*- coding: utf-8 -*-
+from scrapy import Spider
+from scrapy.loader import ItemLoader
+
+from quotes_spider.items import QuotesSpiderItem
+
+
+class QuotesSpider(Spider):
+    name = 'quotes'
+    allowed_domains = ['http://quotes.toscrape.com/']
+    start_urls = (
+        'http://quotes.toscrape.com/',
+    )
+
+    def parse(self, response):
+        l = ItemLoader(item=QuotesSpiderItem(), response=response)
+
+        h1_tag = response.xpath('//h1/a/text()').extract_first()
+        tags = response.xpath('//*[@class="tag-item"]/a/text()').extract()
+
+        l.add_value('h1_tag', h1_tag)
+        l.add_value('tags', tags)
+
+        return l.load_item()
+
+'''''''' code - end ''''''''''''
+
+Item Loader:
+-----------
+	--> An Item Loader is a helper class in Scrapy that makes it easier to populate Items (defined in items.py).
+	--> Instead of manually cleaning, stripping, and formatting data in the spider, you can put that logic inside the loader.
+	--> This keeps your spider clean and makes data processing reusable.
+
+Basic Workflow:
+--------------
+	--> Define an Item in items.py.
+	--> Create an Item Loader in your spider.
+	--> Use .add_xpath(), .add_css(), or .add_value() to fill fields.
+	--> Apply input and output processors (cleaning/formatting).
+	--> Call .load_item() to get the final structured Item.
+	
+	        +-------------------+
+            |     Spider        |
+            | (extracts data)   |
+            +-------------------+
+                      |
+                      v
+            +-------------------+
+            |   Item Loader     |
+            | (cleans & formats)|
+            +-------------------+
+                      |
+                      v
+            +-------------------+
+            |      Item         |
+            | (structured data) |
+            +-------------------+
+                      |
+                      v
+            +-------------------+
+            |    Pipeline       |
+            | (store, validate, |
+            |  save to DB/file) |
+            +-------------------+
+                      |
+                      v
+        +--------------------------------+
+        |    Output (JSON / CSV / DB)    |
+        +--------------------------------+
+
+Description:
+-----------
+Spider â†’ Just extracts raw data from the website.
+Item Loader â†’ Cleans, normalizes, and formats extracted data.
+Item â†’ Acts like a structured container for cleaned data.
+Pipeline â†’ Processes items further (validation, deduplication, saving).
+Output â†’ Final destination (JSON, CSV, XML, database, etc.).
+
+
+Now run the 5_quotes_spider_architecture to check the output.
+
+ItemLoader vs Direct Item Assignment:
+------------------------------------
+Feature                | ItemLoader Approach                              | Direct Item Assignment
+----------------------- | ------------------------------------------------ | -------------------------------------------
+Code style              | Uses ItemLoader object to populate fields        | Assigns values directly to Item fields
+Cleaning/Formatting     | Can apply input/output processors automatically | Needs manual cleaning inside spider
+Reusability             | Centralized (clean rules in items.py)            | Repeated cleaning logic across spiders
+When to use             | Large projects with complex cleaning needs       | Small/medium projects, quick prototyping
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4. pipelines.py:
+   ------------
+	--> In Scrapy, pipelines are used to process scraped data after it has been extracted by the spider.
+	--> Think of them as a conveyor belt:
+		--> The spider puts raw items on it,
+		--> Each pipeline stage cleans, validates, transforms, or stores the data.
+	--> The file pipelines.py is where you define those pipelines.
+
+Analogy: The Spider is like a farmer harvesting crops. The Pipeline is like the factory that cleans, packages, and sends them to storage.
+
+Key Points:
+-----------
+	--> pipelines.py = Post-processing of scraped data.
+	--> Itâ€™s where you:
+		--> Clean
+		--> Validate
+		--> Store (DB, JSON, CSV, MongoDB, Elasticsearch, etc.)
+	--> You must enable it in settings.py with ITEM_PIPELINES.
+	--> You can use multiple pipelines in sequence.
+
+
+Default pipelines.py:
+--------------------
+	--> When you start a project, Scrapy creates a basic pipelines.py like this:
+	
+'''''''' code - start ''''''''''''
+
+class QuotesSpiderPipeline:
+    def process_item(self, item, spider):
+        return item
+		
+'''''''' code - End ''''''''''''
+
+process_item is the main method. It receives every item yielded by your spider. You can modify it (clean data, save to DB, etc.) and return the item.
+
+Working:
+--------
+	--> Spider scrapes data (yield item).
+	--> Item passes through the pipeline components in the order you configure them in settings.py.
+	--> Each pipeline can:
+		--> Clean or validate data.
+		--> Drop invalid items.
+		--> Save data (to JSON, CSV, SQL, MongoDB, etc.).
+		--> Or just pass it along.
+
+Enabling Pipelines: In settings.py, activate pipelines like this: 
+
+ITEM_PIPELINES = {
+   'quotes_spider.pipelines.QuotesSpiderPipeline': 300,
+}
+
+	--> The number (300) is the priority. Lower numbers run earlier, higher numbers later.
+	--> You can chain multiple pipelines.
+
+Usecase1: Data Cleaning
+-----------------------
+
+'''''''' code - start ''''''''''''
+class CleanQuotesPipeline:
+    def process_item(self, item, spider):
+        item['text'] = item['text'].strip('â€œâ€')
+        item['author'] = item['author'].strip()
+        return item
+'''''''' code - End ''''''''''''
+
+Usecase1: Data Formatting
+-----------------------
+class QuotesSpiderPipeline(object):
+    def process_item(self, item, spider):
+        if item['h1_tag']:
+            item['h1_tag'] = item['h1_tag'][0].upper()
+        
+        if item['tags']:
+            item['tags'] = [tag.upper() for tag in item['tags']]
+        return item
+'''''''' code - End ''''''''''''	
+
+Usecase3: Save to JSON File
+-----------------------
+import json
+
+'''''''' code - start ''''''''''''
+class SaveToJsonPipeline:
+    def open_spider(self, spider):
+        self.file = open('quotes.json', 'w', encoding='utf-8')
+        self.file.write("[")
+
+    def close_spider(self, spider):
+        self.file.write("]")
+        self.file.close()
+
+    def process_item(self, item, spider):
+        line = json.dumps(dict(item), ensure_ascii=False) + ",\n"
+        self.file.write(line)
+        return item
+'''''''' code - End ''''''''''''
+
+Usecase4: Save to Database
+--------------------------
+
+'''''''' code - start ''''''''''''
+import sqlite3
+
+class SaveToSQLitePipeline:
+    def open_spider(self, spider):
+        self.conn = sqlite3.connect("quotes.db")
+        self.cur = self.conn.cursor()
+        self.cur.execute("""CREATE TABLE IF NOT EXISTS quotes(
+                            text TEXT, author TEXT, tags TEXT)""")
+
+    def close_spider(self, spider):
+        self.conn.commit()
+        self.conn.close()
+
+    def process_item(self, item, spider):
+        self.cur.execute("INSERT INTO quotes VALUES (?, ?, ?)", 
+                         (item['text'], item['author'], ','.join(item['tags'])))
+        self.conn.commit()
+        return item
+'''''''' code - End ''''''''''''
+
+
+											+------------------+
+											|      Spider      |
+											| (extracts data)  |
+											+------------------+
+													  |
+													  v
+											+------------------+
+											|      Item        |
+											| (raw data)       |
+											+------------------+
+													  |
+													  v
+											+-----------------------------+
+											|   Pipeline Stage 1          |
+											| (cleaning / formatting)     |
+											+-----------------------------+
+													  |
+													  v
+											+-----------------------------+
+											|   Pipeline Stage 2          |
+											| (validation / filtering)    |
+											+-----------------------------+
+													  |
+													  v
+											+-----------------------------+
+											|   Pipeline Stage 3          |
+											| (save to DB / file / API)   |
+											+-----------------------------+
+													  |
+													  v
+											+------------------+
+											|     Output       |
+											| (JSON / CSV / DB)|
+											+------------------+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+4. settings.py:
+   ------------
+	--> settings.py is the configuration file of a Scrapy project.
+	--> It controls how Scrapy behaves:
+		--> Which pipelines are enabled
+		--> How requests are made (headers, delays, retries)
+		--> Which middlewares are active
+		--> Where to store output/logs
+	--> Think of it as the control room for your Scrapy project.
+	--> It decides how polite your bot is, how fast it runs, how it stores data, and what extra processing happens.
+	--> For small projects, you can leave most defaults.
+	--> For large projects, tuning settings.py is critical (delays, retries, pipelines, middlewares, AutoThrottle).
+
+Analogy: Think of Scrapy as a Car:
+	--> The Spider is the driver (decides where to go).
+	--> The Pipelines are the trunk (where data is stored).
+	--> The settings.py is the dashboard â€” you control speed, lights, brakes, radio, A/C.
+
+
+Default settings.py Structure:
+------------------------------
+--> When you start a project, Scrapy generates a settings.py with many options (most commented out).
+-->	Here are the most important ones:
+
+	1. BOT_NAME: 
+		BOT_NAME = "quotes_spider"
+		
+		--> Name of your Scrapy bot/project.
+		--> Used internally (e.g., User-Agent string if you donâ€™t set one manually).
+	
+	2. SPIDER_MODULES & NEWSPIDER_MODULE:
+		SPIDER_MODULES = ["quotes_spider.spiders"]
+		NEWSPIDER_MODULE = "quotes_spider.spiders"
+		
+		--> Tells Scrapy where to look for your spiders. By default, they live in the spiders/ folder.
+	
+	3. ROBOTSTXT_OBEY:
+		ROBOTSTXT_OBEY = True
+
+		--> If True, Scrapy respects robots.txt rules. If False, it ignores them.
+	
+	4. CONCURRENT REQUESTS:
+		CONCURRENT_REQUESTS = 16
+
+		--> Number of parallel requests Scrapy makes. Increasing this = faster crawling, but heavier load on server.
+	
+	5. DOWNLOAD_DELAY:
+		DOWNLOAD_DELAY = 1.0  # seconds
+
+		--> Pause between requests to the same domain. Helps avoid getting blocked.
+	
+	6. DEFAULT_REQUEST_HEADERS:
+		DEFAULT_REQUEST_HEADERS = {
+   'Accept': 'text/html,application/xhtml+xml',
+   'Accept-Language': 'en',
+}
+
+		--> Custom HTTP headers Scrapy sends with each request. Can be useful to mimic a browser.
+
+	7. ITEM_PIPELINES:
+		ITEM_PIPELINES = {
+   "quotes_spider.pipelines.QuotesSpiderPipeline": 300,
+}
+
+		--> Enables item pipelines (from pipelines.py). The number is priority â†’ lower numbers run earlier.
+	
+	8. DOWNLOADER_MIDDLEWARES:
+		DOWNLOADER_MIDDLEWARES = {
+   'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': 400,
+}
+
+		--> Middlewares process requests/responses globally. Example: rotating User-Agents, proxy handling.
+	
+	9. EXTENSIONS & AUTOTHROTTLE:
+		AUTOTHROTTLE_ENABLED = True
+		AUTOTHROTTLE_START_DELAY = 1.0
+		AUTOTHROTTLE_MAX_DELAY = 10.0
+
+		--> AutoThrottle adjusts speed dynamically based on server load. Prevents overloading websites.
+
+	10. FEEDS (Scrapy 2.1+):
+		--> Instead of using -o output.json, you can define feeds directly:
+		
+		FEEDS = {
+   'quotes.json': {'format': 'json', 'overwrite': True},
+}
+
+Textual Diagram that visually maps out settings.py into categories:
+-------------------------------------------------------------------
+
+settings.py
+â”‚
+â”œâ”€â”€ Project Info
+â”‚   â”œâ”€â”€ BOT_NAME
+â”‚   â”œâ”€â”€ SPIDER_MODULES
+â”‚   â””â”€â”€ NEWSPIDER_MODULE
+â”‚
+â”œâ”€â”€ Politeness & Speed
+â”‚   â”œâ”€â”€ ROBOTSTXT_OBEY
+â”‚   â”œâ”€â”€ DOWNLOAD_DELAY
+â”‚   â”œâ”€â”€ CONCURRENT_REQUESTS
+â”‚   â””â”€â”€ AUTOTHROTTLE_* (start, max delay)
+â”‚
+â”œâ”€â”€ Requests & Headers
+â”‚   â”œâ”€â”€ DEFAULT_REQUEST_HEADERS
+â”‚   â”œâ”€â”€ USER_AGENT
+â”‚   â”œâ”€â”€ RETRY_ENABLED / RETRY_TIMES
+â”‚   â””â”€â”€ DOWNLOAD_TIMEOUT
+â”‚
+â”œâ”€â”€ Data Flow
+â”‚   â”œâ”€â”€ ITEM_PIPELINES
+â”‚   â””â”€â”€ FEEDS (JSON, CSV, etc.)
+â”‚
+â”œâ”€â”€ Middleware
+â”‚   â”œâ”€â”€ DOWNLOADER_MIDDLEWARES
+â”‚   â””â”€â”€ SPIDER_MIDDLEWARES
+â”‚
+â”œâ”€â”€ Extensions
+â”‚   â””â”€â”€ STATS, LOG_LEVEL, TELNETCONSOLE_ENABLED
+â”‚
+â””â”€â”€ Output & Storage
+    â”œâ”€â”€ FEEDS
+    â”œâ”€â”€ JOBDIR (resume crawl)
+    â””â”€â”€ DATABASE connections (if custom)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Avoid Getting Banned!
+
+It is very important to be careful while scraping websites; otherwise, you might be banned. Here are some tips to keep in mind while web scraping:
+
+1- In the file settings.py activate the option DOWNLOAD_DELAY or you can do that manually in your code through sleeping a for a random number of seconds. If you use sleep and random, here is a code snippet:
+
+    from time import sleep
+    import random
+     
+    # Your code here
+    ...
+     
+    sleep(random.randrange(1,3))
+
+
+2- In the file settings.py activate the option USER_AGENT like the following, or any Chrome or Firefox user agent here. Defining a user agent let you look more like a browser used by a real person, not an automatic robot.
+
+USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1" 
+
+
+3- Find external proxies and rotate IP addresses while scraping. You can use the package scrapy-proxies for the purpose. https://github.com/aivarsk/scrapy-proxies
+
+
+4- For professional work, consider using ScrapingHub.com to host your scrapers - it offers a free limited plan.
+
+
+Recommendations Before Web Scraping:
+-------------------------------------
+
+â€¢ Before web scraping, it is highly recommended to search for an API for the website you want to get data from. Most large websites offer APIs to make data extraction a better experience for both parties. So try first to search Google for an API for the website; if you find one, you do not need to scrape it. APIs generate JSON objects which are very similar to Python dictionaries, and from which data can be extracted using the Python JSON library.
+
+â€¢ Before web scraping, it is highly recommended you read the Terms and Conditions of the website. Some websites clearly mention prohibiting web scraping without permission, or mention some legal or copyright aspects related to the use of its data.
+
+â€¢ Before web scraping, employ common sense! Some web scraping or other robot activities are obviously illegal if they cause any direct or indirect damage to the company owning data or its customers. It is a good idea to discuss the purpose of a web scraping project with your client before accepting it.
+
+â€¢ Before web scraping, prepare your code to be "polite": do not unnecessarily disable robots.txt of the website; space out your requests a bit so that you do not hammer the site's server; and it is better to run your spiders during off-peak traffic hours of the website.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
