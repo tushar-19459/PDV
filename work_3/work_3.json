@@ -1,32 +1,68 @@
 [
     {
-        "job Title": "Strats Python Developer",
-        "location": " London, UK",
-        "data of job posted": " Thu, 06 Oct 2022",
-        "category": " Permanent"
-    },
-    {
-        "job Title": "Python Software Developer",
-        "location": " Remote, UK-only",
-        "data of job posted": " Thu, 23 Jun 2022",
-        "category": " permanent"
-    },
-    {
-        "job Title": "Senior Software Engineer, Back-End (Remote)",
-        "location": " Galway, Ireland, Remote",
-        "data of job posted": " Wed, 30 Mar 2022",
-        "category": " permanent"
+        "job Title": "Senior Backend Engineer",
+        "location": "Remote",
+        "data of job posted": "Tue, 23 Nov 2021",
+        "category": "Permanent",
+        "skills": [
+            "python",
+            "postgresql",
+            "django",
+            "mysql",
+            "mongodb"
+        ]
     },
     {
         "job Title": "Python Backend Engineer",
-        "location": " Remote",
-        "data of job posted": " Tue, 23 Nov 2021",
-        "category": " Permanent"
+        "location": "Remote",
+        "data of job posted": "Tue, 23 Nov 2021",
+        "category": "Permanent",
+        "skills": [
+            "python",
+            "postgresql",
+            "mongodb",
+            "etls",
+            "data matching"
+        ]
     },
     {
-        "job Title": "Senior Backend Engineer",
-        "location": " Remote",
-        "data of job posted": " Tue, 23 Nov 2021",
-        "category": " Permanent"
+        "job Title": "Senior Software Engineer, Back-End (Remote)",
+        "location": "Galway, Ireland, Remote",
+        "data of job posted": "Wed, 30 Mar 2022",
+        "category": "permanent",
+        "skills": [
+            "python",
+            "sql",
+            "pyramid",
+            "sqlalchemy",
+            "mysql",
+            "django"
+        ]
+    },
+    {
+        "job Title": "Python Software Developer",
+        "location": "Remote, UK-only",
+        "data of job posted": "Thu, 23 Jun 2022",
+        "category": "permanent",
+        "skills": [
+            "opendata",
+            "opensource",
+            "cooperative",
+            "python"
+        ]
+    },
+    {
+        "job Title": "Strats Python Developer",
+        "location": "London, UK",
+        "data of job posted": "Thu, 06 Oct 2022",
+        "category": "Permanent",
+        "skills": [
+            "python",
+            "finance",
+            "london",
+            "pandas",
+            "jupyter",
+            "sql"
+        ]
     }
 ]

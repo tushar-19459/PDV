@@ -7,17 +7,18 @@ class SpiderSpider(scrapy.Spider):
     start_urls = ["https://pythonjobs.github.io/"]
 
     def parse(self, response):
-        print("###########")
-        joblist = response.xpath('//*[@class="job"]')
-        for i in joblist:
-            print("-------")
-            span = i.xpath('.//span/text()').extract()
-            yield{
-                'job Title':i.xpath('.//h1/a/text()').extract()[0],
-                'location':span[0],
-            #     'skill set required':,
-                'data of job posted':span[1],
-                'category':span[2],
-            }
-            # print(i.xpath('.//h1/a/text()').extract())
-            # print(spans)
+        a = response.xpath('//*[@class="go_button"]/@href').extract()
+
+        for i in a:
+            yield response.follow(i, callback=self.parse_job)
+
+    def parse_job(self, response):
+        tags = response.xpath('//*[@class="tags clear"]/li/a/text()').extract()
+        tags = [item.strip() for item in tags]
+        yield {
+            "job Title": response.xpath("//h1/text()").extract_first().strip(),
+            "location": response.xpath("(//span)[5]//text()").extract_first().strip(),
+            "data of job posted": response.xpath("(//span)[3]//text()").extract()[1].strip(),
+            "category": response.xpath("(//span)[4]//text()").extract_first().strip(),
+            "skills": tags,
+        }
