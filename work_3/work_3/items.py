@@ -5,8 +5,11 @@
 
 import scrapy
 
-
 class Work3Item(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    job_Title = scrapy.Field()
+    location = scrapy.Field()
+    date = scrapy.Field()
+    category = scrapy.Field()
+    skills = scrapy.Field()
     pass

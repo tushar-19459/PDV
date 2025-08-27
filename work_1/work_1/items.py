@@ -9,4 +9,11 @@ import scrapy
 class Work1Item(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+
+    job_title = scrapy.Field()
+    location = scrapy.Field()
+    Skills = scrapy.Field()
+    date = scrapy.Field()
+    category = scrapy.Field()
+
     pass
