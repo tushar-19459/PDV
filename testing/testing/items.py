@@ -6,8 +6,7 @@
 import scrapy
 
 
-class QuotesSpider1Item(scrapy.Item):
+class TestingItem(scrapy.Item):
     # define the fields for your item here like:
-    h1 = scrapy.Field()
-    tags = scrapy.Field()
+    # name = scrapy.Field()
     pass

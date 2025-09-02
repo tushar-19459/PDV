@@ -5,9 +5,9 @@
 
 import scrapy
 
-
-class QuotesSpider1Item(scrapy.Item):
+class OneItem(scrapy.Item):
     # define the fields for your item here like:
-    h1 = scrapy.Field()
+    quote = scrapy.Field()
+    author = scrapy.Field()
     tags = scrapy.Field()
     pass
