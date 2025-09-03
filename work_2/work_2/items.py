@@ -8,5 +8,9 @@ import scrapy
 
 class Work2Item(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    job_role = scrapy.Field()
+    company = scrapy.Field()
+    posted_on = scrapy.Field()
+    salary = scrapy.Field()
+    location = scrapy.Field()
     pass

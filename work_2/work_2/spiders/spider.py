@@ -1,4 +1,5 @@
 import scrapy
+from work_2.items import Work2Item
 
 class SpiderSpider(scrapy.Spider):
     name = "spider"
@@ -6,22 +7,41 @@ class SpiderSpider(scrapy.Spider):
     start_urls = ["https://remote.co/remote-jobs/developer"]
 
     def parse(self, response):
-        # Get all job links
-        job_links = response.xpath("//div[@class='card-body']/h2/a/@href").getall()
+        job_div = response.xpath('//*[@id="job-table-wrapper"]/div')
+        data = job_div[0]
 
-        for link in job_links:
-            yield response.follow(link, callback=self.parse_job)
+        # for i in job_div:
+        #     job_role = i.xpath(".//*[@class='sc-fzEeWY jYWVDl']/text()").get()
+        #     if job_role!= None:
 
-        # Handle pagination (next page)
-        next_page = response.xpath("//a[@class='next page-numbers']/@href").get()
-        if next_page:
-            yield response.follow(next_page, callback=self.parse)
+        #         company = i.xpath('.//h3/text()').get()
 
-    def parse_job(self, response):
-        yield {
-            "job_title": response.xpath("//h1/text()").get(default="").strip(),
-            "company": response.xpath("//div[@class='company-card']//h3/text()").get(default="").strip(),
-            "location": response.xpath("//div[@class='location']/text()").get(default="").strip(),
-            "posted_date": response.xpath("//div[@class='date-posted']/text()").get(default="").strip(),
-            "description": " ".join(response.xpath("//div[@class='job-description']//text()").getall()).strip()
-        }
+        #         posted_on = i.xpath(".//span[2]/text()").get()
+
+        #         salary = i.xpath(".//li[4]/text()").get()
+        
+        #         location = i.xpath(".//*[@class='sc-fdZtqL beUnFW']/text()").get()
+
+        #         yield{
+        #             'job_role':job_role,
+        #             'company':company,
+        #             'posted_on':posted_on,
+        #             'salary':salary,
+        #             'location':location,
+        #         }
+
+        for i in job_div:
+            items = Work2Item()
+            job_role = i.xpath(".//*[@class='sc-fzEeWY jYWVDl']/text()").get()
+            if job_role!= None:
+                items['job_role'] = i.xpath(".//*[@class='sc-fzEeWY jYWVDl']/text()").get()
+
+                items['company'] = i.xpath('.//h3/text()').get()
+
+                items['posted_on'] = i.xpath(".//span[2]/text()").get()
+
+                items['salary'] = i.xpath(".//li[4]/text()").get()
+        
+                items['location'] = i.xpath(".//*[@class='sc-fdZtqL beUnFW']/text()").get()
+
+                yield items
