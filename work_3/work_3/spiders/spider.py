@@ -32,5 +32,5 @@ class SpiderSpider(scrapy.Spider):
         items['location'] =  response.xpath("(//span)[5]//text()").extract_first().strip()
         items['date'] =  response.xpath("(//span)[3]//text()").extract()[1].strip()
         items['category'] =  response.xpath("(//span)[4]//text()").extract_first().strip()
-        items['skills'] =  tags
+        items['skills'] =  ', '.join(tags)
         yield items
