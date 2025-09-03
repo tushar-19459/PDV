@@ -1,0 +1,177 @@
+[
+    {
+        "job_title": "Django Developer",
+        "location": "Birmingham, United Kingdom",
+        "Skills": "Back end, Cloud, Database, Web",
+        "date": "28 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Backend Engineer (Python) (Consultant)",
+        "location": "Worldwide (Remote), Worldwide (Remote), Worldwide (Remote)",
+        "Skills": "Back end",
+        "date": "27 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Full Stack Engineer",
+        "location": "London, United Kingdom",
+        "Skills": "Back end, Cloud, Front end",
+        "date": "20 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Software Engineer, OSS - Jupyter",
+        "location": "Remote, United States",
+        "Skills": "Back end, Front end, Systems, Web",
+        "date": "14 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Python Developer",
+        "location": "Remote, USA",
+        "Skills": "Back end",
+        "date": "14 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Backend Python Software Engineer (Hybrid)",
+        "location": "Raleigh-Durham, North Carolina, USA",
+        "Skills": "Back end",
+        "date": "14 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Sr. Software Engineer - Remote",
+        "location": "remote, Florida, United States",
+        "Skills": "Back end, Front end",
+        "date": "13 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Python Developer",
+        "location": "Any, European Union",
+        "Skills": "Back end",
+        "date": "12 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Back-end Software Engineer",
+        "location": "Stavanger, Norway",
+        "Skills": "Cloud, Database, Integration, Systems, Web",
+        "date": "08 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Python Developer",
+        "location": "Dublin, Dublin, Ireland",
+        "Skills": "Back end, Big Data",
+        "date": "07 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Lead Developer, Python, AWS, MedTech - Botley",
+        "location": "High Street, Botley, UK",
+        "Skills": "Back end, Cloud, Lead, Machine Learning",
+        "date": "04 August 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Software Developer (Python)",
+        "location": "Canada - remote, remote in Canada, Canada",
+        "Skills": "Back end, Machine Learning",
+        "date": "31 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Principal Python Engineer",
+        "location": "Warsaw, Poland",
+        "Skills": "Back end",
+        "date": "29 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Python Software Engineer. AI driven Helpdesk. RASA integration",
+        "location": "London, London, United Kingdom",
+        "Skills": "Back end, Integration",
+        "date": "28 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Full Stack Engineer - React/Python in Toronto.",
+        "location": "Toronto, Ontario, Canada",
+        "Skills": "Back end, Front end",
+        "date": "24 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Software Engineer",
+        "location": "San Francisco, California, United States",
+        "Skills": "Back end, Big Data, Finance",
+        "date": "22 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Software Engineer",
+        "location": "Hyderabad, Telangana, India",
+        "Skills": "Back end, Cloud, Front end, Integration, Lead, Management, Web",
+        "date": "21 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Python Developer",
+        "location": "Bogotá, Medellin or Cartagena, Cundinamarca, Antioquia or Bolivar, Colombia",
+        "Skills": "Back end, Big Data, Cloud, Database, Machine Learning, Management, Operations, Systems, Testing, Text Processing, Web",
+        "date": "11 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Backend Engineer",
+        "location": "Full remote, Full remote, Full remote",
+        "Skills": "Back end, Database, Testing",
+        "date": "10 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Software Engineer – Platform & Systems",
+        "location": "San Francisco, CA, United States",
+        "Skills": "Back end, Cloud, Database, Front end, Integration",
+        "date": "10 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Python Developer ONSITE",
+        "location": "Brooklyn, NY, United States",
+        "Skills": "Back end, Operations, Systems",
+        "date": "08 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Open Source Software Engineer",
+        "location": "Remote, Global",
+        "Skills": "Back end, Machine Learning",
+        "date": "05 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Python Software Engineer Intern",
+        "location": "Remote, Remote, USA",
+        "Skills": "Back end, Cloud, Front end, Systems",
+        "date": "03 July 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Full Stack Developer",
+        "location": "Remote, Remote, United States of America",
+        "Skills": "Back end, Front end",
+        "date": "30 June 2025",
+        "category": "Developer / Engineer"
+    },
+    {
+        "job_title": "Senior Python Developer",
+        "location": "Medellin Cartagena Bogota, cundinamarca Antioquia bolivar, Colombia",
+        "Skills": "Back end, Cloud, Database, Front end, Integration, Operations, Systems, Testing",
+        "date": "26 June 2025",
+        "category": "Developer / Engineer"
+    }
+]
