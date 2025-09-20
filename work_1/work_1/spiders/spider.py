@@ -20,6 +20,7 @@ class SpiderSpider(scrapy.Spider):
             
     # using the normal items and yield 
     
+    
     def parse(self, response):
         ol = response.xpath('//ol/li')
 
