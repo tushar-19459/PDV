@@ -1,0 +1,220 @@
+Beauiful_Soup_Intro.ipynb
+
+BeautifulSoup
+
+* Beautiful Soup is a Python library for getting data out of HTML, XML, and other markup languages.
+
+* Say you’ve found some webpages that display data relevant to your work/research, such as date or address information, but that do not provide any way of downloading the data directly. Beautiful Soup helps you pull particular content from a webpage, remove the HTML markup, and save the information.
+
+* It is a tool for web scraping that helps you clean up and parse the documents you have pulled down from the web.
+
+* This process is suitable for static content which is available by making an HTTP request to get the webpage content
+
+----------
+Basic Termes in Web Scraping
+
+* Crawler: is a web bot that visits a stack of web pages and accumulates the links (URLs) of the nodes, deriving new URLs from each new web page [html] that it visits. Crawler might or might not get pages’ info in a data storage. It does not go deep unless programmed explicitly.
+
+* Scraper: is a bot that visits web pages of a given set of URLs. It does not collect new URLs (as a crawler does). It rather visits pre-collected URLs and retrieves relevant data to store into a data storage.
+
+* Parser: is an [offline] robot that processes or analyses given data to dervie a proper data structures. It retrieves information from [unstructured] data, whether from data storage or directly from the web (e.g. HTML).
+
+html.parser : built-in, no extra dependencies needed.
+html5lib : the most lenient (not strictly matches your pattern), better use it if HTML is broken.
+lxml : the fastest. html2text check
+----------
+Fake Useragent
+
+pip install fake_useragent
+
+import requests
+from bs4 import BeautifulSoup
+from fake_useragent import UserAgent
+
+ua = UserAgent()
+header = {'user-agent':ua.chrome}
+google_page = requests.get('https://www.google.com',headers=header)
+#print(google_page.content)
+
+soup = BeautifulSoup(google_page.content,'lxml') # html.parser
+
+print(soup.prettify())
+
+---------
+* reading a file from a dir 
+
+def read_file():
+    file = open('three_sisters.html')
+    data = file.read()
+    file.close()
+    return data
+
+----------
+1 Navigation through Strings
+
+meta = soup.meta
+body = soup.body
+
+2 Navigation through Tags Name
+
+title = soup.title
+p = soup.p
+
+3 Navigating Through Child tag
+
+head.contents : this will return you []
+
+body.children: this will return you a iterable object 
+
+------------
+
+* Navigating with Beautifulsoup
+
+There are 3 types of movement across html Parse tree
+
+1 Down the Tree - body tag to P tag
+for child in body.children:
+for child in head.contents:
+
+
+2 Up the Tree - P tag to body tag
+
+print(soup.parent) # returns none as it is at top of the hirerchey
+
+link = soup.a
+print(link) # prints first a tag
+print(link.parents) # returns generator object parents at mem location
+print(link.parent) # returns P tag structure
+print(link.parent.name) # returns a tag's parent name only
+
+
+for parent in link.parents:
+    print(parent.name) # p --> body --> html --> doc
+    pass
+p
+body
+html
+[document]
+
+3 Sideways Movement - P tag to P tag Movement
+
+moving from current tag to next sibling tag
+----------------------------------------===================================================
+BeautifulSoup_projects1_2025.ipynb
+
+soup.findAll('a',string = lambda text:'Lacie' in text.strip())
+
+python_jobs = results.find_all("h2", string=lambda text: "python" in text.lower())
+
+div = soup.find('div', attrs = {'id':'all_quotes'})
+
+all_divs = table.findAll('div',attrs = {'class':'apple'}):
+
+print(f'Location : {i.find("span",class_="listing-location").text}')
+
+print(f'Skill set required : {i.find("span","listing-job-type").text.strip()}')
+
+div_Story[0].a.text.strip()  | div_Story[0].a.text.split('#')[0] 
+
+goo = body.findAll('a')
+goo[-1]['href']
+
+goo.has_attr('href')
+
+for i in jobs:
+  temp = URL + i.find('a',class_='go_button')["href"]
+
+-------------------------------------------------------------------------------------
+Key Ethical Compliance Principles to be followed for Web Scraping
+
+1 Check the Website’s robots.txt
+* The robots.txt file specifies what parts of the site are allowed or disallowed for automated scraping.
+* If an area is disallowed, avoid scraping it unless you have explicit permission.
+
+2 Read and Respect the Terms of Service (ToS)
+* Many sites have legal restrictions in their ToS against scraping certain content.
+
+3Avoid Overloading Servers
+* Use polite delays between requests (time.sleep()), avoid sending too many requests in parallel.
+
+4 Don’t Collect Sensitive or Personal Data Without Consent
+* Scraping PII (personally identifiable information) without explicit permission is unethical and may be illegal.
+
+5 Credit the Source if Data Is Used Publicly
+If the scraped data is published, acknowledge the source.
+
+6 Obtain Permission for Large or Repeated Scraping
+* Contact the site owner if your scraping might impact their service.
+-------------------------------------------------------------------------------------
+from urllib.robotparser import RobotFileParser
+
+robots_url = site_url + "/robots.txt"
+
+rp = RobotFileParser()
+rp.set_url(robots_url)
+rp.read()
+
+if rp.can_fetch("*", site_url):
+time.sleep(2)
+-------------------------------------------------------------------------------------
+In scrapy Shell:
+
+fetch("https://quotes.toscrape.com/")
+response.xpath('//h1/a/text()').extract()
+response.xpath('//h1/a/text()').extract_first()
+response.xpath('//*[@class="tag-item"]/a/text()').extract()
+
+// Means: Select nodes anywhere in the document (search globally, not just from the root). So it looks through the entire HTML.
+
+* Wildcard: matches any tag (e.g., <div>, <span>, <p>, etc.).
+
+quote.xpath('.//a') Note: . is used before // indicates custom select
+quote.xpath('.//*[@itemproop="text"]/text()').extract_first()
+
+
+next_page_url = response.xpath('//*[@class="next"]/a/@href').extract_first()
+absolute_next_page_url = response.urljoin(next_page_url)
+
+scrapy crawl quotes -o items.json
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Note:
+Using print in Scrapy:
+-----------------------
+	--> print() just outputs to your console (for debugging).
+	--> The data is not saved, not returned, not passed to Scrapyâ€™s pipelines or output files.
+	--> see quotes printed in the terminal, but Scrapy wonâ€™t store them in your output.
+	--> Use print() for debugging.
+
+Using yield in Scrapy:
+-----------------------
+	--> yield is used to return scraped data or new requests back to Scrapy.
+	--> Scrapy takes what you yield and:
+		--> Sends it to the Item Pipeline (if itâ€™s data)
+		--> Or schedules another request (if itâ€™s a new URL request)
+	-->Use yield when you want Scrapy to store data or follow links.
+
+
+Key Difference:
+
+Feature             | print()                           | yield
+--------------------|-----------------------------------|---------------------------------------------
+Purpose             | For debugging (just displays data)| Passes data/requests to Scrapy engine
+Persistence         | Data is not saved                 | Data is saved to output (CSV, JSON, DB, etc.)
+Integration         | Does not interact with Scrapy     | Fully integrated with Scrapy workflow
+Output in file      | Not possible                      | Possible (scrapy crawl spider -o data.json)
+When to use         | While testing or debugging        | When you want to store data or follow links
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Scrapy Architecture:
+--------------------
+1. scrapy.cfg:
+   -----------
+	--> Itâ€™s a project-level configuration file created automatically when you start a Scrapy project (scrapy startproject <name>).
+	--> Think of it as the entry point where Scrapy knows:
+		--> Which project you are working on
+		--> Where to find its settings
+		--> How to deploy the project (if you use Scrapyd)
+	--> This file usually lives at the root of the Scrapy project folder.
+	--> Without this file, Scrapy wouldnâ€™t know how to connect your commands to your project.
