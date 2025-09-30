@@ -798,39 +798,39 @@ Textual Diagram that visually maps out settings.py into categories:
 -------------------------------------------------------------------
 
 settings.py
-â”‚
-â”œâ”€â”€ Project Info
-â”‚   â”œâ”€â”€ BOT_NAME
-â”‚   â”œâ”€â”€ SPIDER_MODULES
-â”‚   â””â”€â”€ NEWSPIDER_MODULE
-â”‚
-â”œâ”€â”€ Politeness & Speed
-â”‚   â”œâ”€â”€ ROBOTSTXT_OBEY
-â”‚   â”œâ”€â”€ DOWNLOAD_DELAY
-â”‚   â”œâ”€â”€ CONCURRENT_REQUESTS
-â”‚   â””â”€â”€ AUTOTHROTTLE_* (start, max delay)
-â”‚
-â”œâ”€â”€ Requests & Headers
-â”‚   â”œâ”€â”€ DEFAULT_REQUEST_HEADERS
-â”‚   â”œâ”€â”€ USER_AGENT
-â”‚   â”œâ”€â”€ RETRY_ENABLED / RETRY_TIMES
-â”‚   â””â”€â”€ DOWNLOAD_TIMEOUT
-â”‚
-â”œâ”€â”€ Data Flow
-â”‚   â”œâ”€â”€ ITEM_PIPELINES
-â”‚   â””â”€â”€ FEEDS (JSON, CSV, etc.)
-â”‚
-â”œâ”€â”€ Middleware
-â”‚   â”œâ”€â”€ DOWNLOADER_MIDDLEWARES
-â”‚   â””â”€â”€ SPIDER_MIDDLEWARES
-â”‚
-â”œâ”€â”€ Extensions
-â”‚   â””â”€â”€ STATS, LOG_LEVEL, TELNETCONSOLE_ENABLED
-â”‚
-â””â”€â”€ Output & Storage
-    â”œâ”€â”€ FEEDS
-    â”œâ”€â”€ JOBDIR (resume crawl)
-    â””â”€â”€ DATABASE connections (if custom)
+
+ Project Info
+ BOT_NAME
+ SPIDER_MODULES
+    NEWSPIDER_MODULE
+
+ Politeness & Speed
+ ROBOTSTXT_OBEY
+ DOWNLOAD_DELAY
+ CONCURRENT_REQUESTS
+    AUTOTHROTTLE_* (start, max delay)
+
+ Requests & Headers
+ DEFAULT_REQUEST_HEADERS
+ USER_AGENT
+ RETRY_ENABLED / RETRY_TIMES
+    DOWNLOAD_TIMEOUT
+
+ Data Flow
+ ITEM_PIPELINES
+    FEEDS (JSON, CSV, etc.)
+
+ Middleware
+ DOWNLOADER_MIDDLEWARES
+    SPIDER_MIDDLEWARES
+
+ Extensions
+    STATS, LOG_LEVEL, TELNETCONSOLE_ENABLED
+
+ Output & Storage
+     FEEDS
+     JOBDIR (resume crawl)
+     DATABASE connections (if custom)
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Avoid Getting Banned!
