@@ -1,103 +1,703 @@
 [
-{"job_role": "Senior Software Engineer", "company": "Grainger", "posted_on": "Today", "salary": "$110,500 - $184,100 Annually", "location": "Hybrid Remote in Chicago, IL"},
-{"job_role": "Staff Software Engineer", "company": "Grainger", "posted_on": "Today", "salary": "$131,200 - $218,700 Annually", "location": "Hybrid Remote in Chicago, IL"},
-{"job_role": "Frontend Software Engineer", "company": "Blueground", "posted_on": "Today", "salary": null, "location": "Remote in Greece"},
-{"job_role": "Full Stack Developer", "company": "Morningstar Corporation", "posted_on": "Today", "salary": "$50 - $75 Hourly", "location": "Remote, US National"},
-{"job_role": "Senior Full Stack Software Engineer", "company": "Ether.fi", "posted_on": "Today", "salary": "$120,000 - $200,000 Annually", "location": "Hybrid Remote in New York, NY, Denver, CO"},
-{"job_role": "Graphic Designer", "company": "Washington University in St. Louis", "posted_on": "Today", "salary": "$23 - $36 Hourly", "location": "Hybrid Remote in Saint Louis, MO"},
-{"job_role": "Staff Frontend Engineer", "company": "Bazaarvoice", "posted_on": "Today", "salary": null, "location": "Hybrid Remote in Bengaluru, KA, India"},
-{"job_role": "Web UX Designer", "company": "By Winona", "posted_on": "Yesterday", "salary": null, "location": "Remote in Mexico, Colombia, Chile, Brazil, Argentina, Philippines"},
-{"job_role": "Web Experience Director", "company": null, "posted_on": "Today", "salary": "$155,000 - $195,000 Annually", "location": "Remote in Canada"},
-{"job_role": "Senior Website Performance Manager", "company": null, "posted_on": "Today", "salary": "$140,000 - $155,000 Annually", "location": "Remote, US National"},
-{"job_role": "Senior Full Stack Web Developer", "company": null, "posted_on": "Today", "salary": "60,000 GBP Annually", "location": "Remote in United Kingdom, Spain, France, Germany, Poland"},
-{"job_role": "Full Stack Developer", "company": null, "posted_on": "Today", "salary": null, "location": "Hybrid Remote in Athens, A1, Greece"},
-{"job_role": "Senior Front End Engineer - Games", "company": null, "posted_on": "Today", "salary": null, "location": "Hybrid Remote in Marousi, A1, Greece"},
-{"job_role": "Website and Demand Capture Manager", "company": null, "posted_on": "Today", "salary": "130,000 - 150,000 CAD Annually", "location": "Hybrid Remote in Canada"},
-{"job_role": "Website and Demand Capture Manager", "company": null, "posted_on": "Today", "salary": "$20,000 - $25,000 Annually", "location": "Remote in Brazil"},
-{"job_role": "Website and Demand Capture Manager", "company": null, "posted_on": "Today", "salary": "$135,000 - $150,000 Annually", "location": "Remote, US National"},
-{"job_role": "Web Content Manager", "company": null, "posted_on": "Today", "salary": "$80,000 Annually", "location": "Remote in AZ"},
-{"job_role": "Frontend Developer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in Brno, JM, Czechia"},
-{"job_role": "Support and Quality Assurance Analyst", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Remote in India"},
-{"job_role": "UI Designer", "company": null, "posted_on": "Yesterday", "salary": "$75,000 - $90,000 Annually", "location": "Remote in West Bend, WI or US National"},
-{"job_role": "Senior Full stack Software Engineer - Node.js and React", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Remote in Porto, PR, Portugal"},
-{"job_role": "Senior Full-stack Developer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Remote in United Kingdom"},
-{"job_role": "Senior - WordPress Developer", "company": null, "posted_on": "Yesterday", "salary": "$38 EUR Hourly", "location": "Remote in Poland"},
-{"job_role": "Lead UX Designer", "company": null, "posted_on": "Yesterday", "salary": "$127,700 - $163,600 Annually", "location": "Hybrid Remote in Dublin, CA"},
-{"job_role": "Javascript Developer", "company": null, "posted_on": "Yesterday", "salary": "$75,000 - $115,000 Annually", "location": "Hybrid Remote in Raleigh, NC"},
-{"job_role": "Full Stack Engineer", "company": null, "posted_on": "Yesterday", "salary": "$110,000 - $125,000 Annually", "location": "Hybrid Remote in Durham, NC"},
-{"job_role": "Software Engineer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in San Francisco, CA, New York, NY, Austin, TX"},
-{"job_role": "Websites Lead", "company": null, "posted_on": "Yesterday", "salary": null, "location": "US National  (Not hiring in AK, NY, CA, WA, CO)"},
-{"job_role": "WordPress Developer", "company": null, "posted_on": "Yesterday", "salary": "$70,000 - $75,000 Annually", "location": "Remote in AZ, CA, CO, FL, GA, HI, MS, MO, NC, NH, NV, NY, OK, SD, TN, TX, UT, WA, WY"},
-{"job_role": "WordPress Developer", "company": null, "posted_on": "Yesterday", "salary": "$70,000 - $75,000 Annually", "location": "Remote in Austin, TX"},
-{"job_role": "UI - UX designer", "company": null, "posted_on": "Yesterday", "salary": "$90,000 - $120,000 Annually", "location": "Remote in Houston, TX or US National"},
-{"job_role": "Senior Full Stack Developer - .NET and React", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in Perth, WA, Australia"},
-{"job_role": "Full Stack Engineer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in San Francisco, CA, Los Angeles, CA"},
-{"job_role": "NOAA Weather Program Office Web Designer - Developer", "company": null, "posted_on": "Yesterday", "salary": "$30 - $42 Hourly", "location": "Remote in Silver Spring, MD"},
-{"job_role": ".NET Developer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Remote, US National"},
-{"job_role": "Senior Fullstack Engineer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in Bangalore, KA, India"},
-{"job_role": "Java Analytics Developer", "company": null, "posted_on": "Yesterday", "salary": "$70 - $80 Hourly", "location": "Remote, US National"},
-{"job_role": "Java Analytics Developer", "company": null, "posted_on": "Yesterday", "salary": "$70 - $80 Hourly", "location": "Remote, US National"},
-{"job_role": "Full Stack .NET Application Developer", "company": null, "posted_on": "Yesterday", "salary": "$70,000 - $115,000 Annually", "location": "Remote, US National"},
-{"job_role": "UI Designer", "company": null, "posted_on": "Yesterday", "salary": "$75,000 - $90,000 Annually", "location": "Remote in West Bend, WI"},
-{"job_role": "Junior Software Engineer", "company": null, "posted_on": "Yesterday", "salary": "$58,000 - $115,900 Annually", "location": "Hybrid Remote in Omaha, NE, Hampton, VA"},
-{"job_role": "Lead Software Engineer - Application Development", "company": null, "posted_on": "3 days ago", "salary": null, "location": "Remote, US National"},
-{"job_role": "Senior Mobile Engineer", "company": null, "posted_on": "3 days ago", "salary": null, "location": "Hybrid Remote in Chicago, IL"},
-{"job_role": "Senior Software Engineer", "company": null, "posted_on": "3 days ago", "salary": "$215,000 - $290,000 Annually", "location": "Hybrid Remote in Redwood City, CA"},
-{"job_role": "Lead Full-Stack Software Engineer", "company": null, "posted_on": "3 days ago", "salary": "$156,200 - $265,000 Annually", "location": "Remote, US National"},
-{"job_role": "Software Development Engineer - Front End", "company": null, "posted_on": "3 days ago", "salary": "$133,900 - $242,000 Annually", "location": "Hybrid Remote in San Jose, CA"},
-{"job_role": "Staff Front End Engineer", "company": null, "posted_on": "3 days ago", "salary": "$180,000 - $250,000 Annually", "location": "Hybrid Remote in New York, NY"},
-{"job_role": "Software Engineer 1", "company": null, "posted_on": "3 days ago", "salary": null, "location": "Hybrid Remote in Washington, DC"},
-{"job_role": "Frontend Engineer", "company": null, "posted_on": "3 days ago", "salary": null, "location": "Remote, US National"},
-{"job_role": "Staff Front and Software Engineer", "company": null, "posted_on": "3 days ago", "salary": "$180,000 - $250,000 Annually", "location": "Remote, US National"}
+    {
+        "job_role": "Senior Software Engineer",
+        "company": "Grainger",
+        "posted_on": "Today",
+        "salary": "$110,500 - $184,100 Annually",
+        "location": "Hybrid Remote in Chicago, IL"
+    },
+    {
+        "job_role": "Staff Software Engineer",
+        "company": "Grainger",
+        "posted_on": "Today",
+        "salary": "$131,200 - $218,700 Annually",
+        "location": "Hybrid Remote in Chicago, IL"
+    },
+    {
+        "job_role": "Frontend Software Engineer",
+        "company": "Blueground",
+        "posted_on": "Today",
+        "salary": null,
+        "location": "Remote in Greece"
+    },
+    {
+        "job_role": "Full Stack Developer",
+        "company": "Morningstar Corporation",
+        "posted_on": "Today",
+        "salary": "$50 - $75 Hourly",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Senior Full Stack Software Engineer",
+        "company": "Ether.fi",
+        "posted_on": "Today",
+        "salary": "$120,000 - $200,000 Annually",
+        "location": "Hybrid Remote in New York, NY, Denver, CO"
+    },
+    {
+        "job_role": "Graphic Designer",
+        "company": "Washington University in St. Louis",
+        "posted_on": "Today",
+        "salary": "$23 - $36 Hourly",
+        "location": "Hybrid Remote in Saint Louis, MO"
+    },
+    {
+        "job_role": "Staff Frontend Engineer",
+        "company": "Bazaarvoice",
+        "posted_on": "Today",
+        "salary": null,
+        "location": "Hybrid Remote in Bengaluru, KA, India"
+    },
+    {
+        "job_role": "Web UX Designer",
+        "company": "By Winona",
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote in Mexico, Colombia, Chile, Brazil, Argentina, Philippines"
+    },
+    {
+        "job_role": "Web Experience Director",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$155,000 - $195,000 Annually",
+        "location": "Remote in Canada"
+    },
+    {
+        "job_role": "Senior Website Performance Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$140,000 - $155,000 Annually",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Senior Full Stack Web Developer",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "60,000 GBP Annually",
+        "location": "Remote in United Kingdom, Spain, France, Germany, Poland"
+    },
+    {
+        "job_role": "Full Stack Developer",
+        "company": null,
+        "posted_on": "Today",
+        "salary": null,
+        "location": "Hybrid Remote in Athens, A1, Greece"
+    },
+    {
+        "job_role": "Senior Front End Engineer - Games",
+        "company": null,
+        "posted_on": "Today",
+        "salary": null,
+        "location": "Hybrid Remote in Marousi, A1, Greece"
+    },
+    {
+        "job_role": "Website and Demand Capture Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "130,000 - 150,000 CAD Annually",
+        "location": "Hybrid Remote in Canada"
+    },
+    {
+        "job_role": "Website and Demand Capture Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$20,000 - $25,000 Annually",
+        "location": "Remote in Brazil"
+    },
+    {
+        "job_role": "Website and Demand Capture Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$135,000 - $150,000 Annually",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Web Content Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$80,000 Annually",
+        "location": "Remote in AZ"
+    },
+    {
+        "job_role": "Frontend Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in Brno, JM, Czechia"
+    },
+    {
+        "job_role": "Support and Quality Assurance Analyst",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote in India"
+    },
+    {
+        "job_role": "UI Designer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$75,000 - $90,000 Annually",
+        "location": "Remote in West Bend, WI or US National"
+    },
+    {
+        "job_role": "Senior Full stack Software Engineer - Node.js and React",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote in Porto, PR, Portugal"
+    },
+    {
+        "job_role": "Senior Full-stack Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote in United Kingdom"
+    },
+    {
+        "job_role": "Senior - WordPress Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$38 EUR Hourly",
+        "location": "Remote in Poland"
+    },
+    {
+        "job_role": "Lead UX Designer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$127,700 - $163,600 Annually",
+        "location": "Hybrid Remote in Dublin, CA"
+    },
+    {
+        "job_role": "Javascript Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$75,000 - $115,000 Annually",
+        "location": "Hybrid Remote in Raleigh, NC"
+    },
+    {
+        "job_role": "Full Stack Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$110,000 - $125,000 Annually",
+        "location": "Hybrid Remote in Durham, NC"
+    },
+    {
+        "job_role": "Software Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in San Francisco, CA, New York, NY, Austin, TX"
+    },
+    {
+        "job_role": "Websites Lead",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "US National  (Not hiring in AK, NY, CA, WA, CO)"
+    },
+    {
+        "job_role": "WordPress Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70,000 - $75,000 Annually",
+        "location": "Remote in AZ, CA, CO, FL, GA, HI, MS, MO, NC, NH, NV, NY, OK, SD, TN, TX, UT, WA, WY"
+    },
+    {
+        "job_role": "WordPress Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70,000 - $75,000 Annually",
+        "location": "Remote in Austin, TX"
+    },
+    {
+        "job_role": "UI - UX designer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$90,000 - $120,000 Annually",
+        "location": "Remote in Houston, TX or US National"
+    },
+    {
+        "job_role": "Senior Full Stack Developer - .NET and React",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in Perth, WA, Australia"
+    },
+    {
+        "job_role": "Full Stack Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in San Francisco, CA, Los Angeles, CA"
+    },
+    {
+        "job_role": "NOAA Weather Program Office Web Designer - Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$30 - $42 Hourly",
+        "location": "Remote in Silver Spring, MD"
+    },
+    {
+        "job_role": ".NET Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Senior Fullstack Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in Bangalore, KA, India"
+    },
+    {
+        "job_role": "Java Analytics Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70 - $80 Hourly",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Java Analytics Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70 - $80 Hourly",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Full Stack .NET Application Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70,000 - $115,000 Annually",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "UI Designer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$75,000 - $90,000 Annually",
+        "location": "Remote in West Bend, WI"
+    },
+    {
+        "job_role": "Junior Software Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$58,000 - $115,900 Annually",
+        "location": "Hybrid Remote in Omaha, NE, Hampton, VA"
+    },
+    {
+        "job_role": "Lead Software Engineer - Application Development",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": null,
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Senior Mobile Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": null,
+        "location": "Hybrid Remote in Chicago, IL"
+    },
+    {
+        "job_role": "Senior Software Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$215,000 - $290,000 Annually",
+        "location": "Hybrid Remote in Redwood City, CA"
+    },
+    {
+        "job_role": "Lead Full-Stack Software Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$156,200 - $265,000 Annually",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Software Development Engineer - Front End",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$133,900 - $242,000 Annually",
+        "location": "Hybrid Remote in San Jose, CA"
+    },
+    {
+        "job_role": "Staff Front End Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$180,000 - $250,000 Annually",
+        "location": "Hybrid Remote in New York, NY"
+    },
+    {
+        "job_role": "Software Engineer 1",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": null,
+        "location": "Hybrid Remote in Washington, DC"
+    },
+    {
+        "job_role": "Frontend Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": null,
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Staff Front and Software Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$180,000 - $250,000 Annually",
+        "location": "Remote, US National"
+    }
 ][
-{"job_role": "Senior Software Engineer", "company": "Grainger", "posted_on": "Today", "salary": "$110,500 - $184,100 Annually", "location": "Hybrid Remote in Chicago, IL"},
-{"job_role": "Staff Software Engineer", "company": "Grainger", "posted_on": "Today", "salary": "$131,200 - $218,700 Annually", "location": "Hybrid Remote in Chicago, IL"},
-{"job_role": "Frontend Software Engineer", "company": "Blueground", "posted_on": "Today", "salary": null, "location": "Remote in Greece"},
-{"job_role": "Full Stack Developer", "company": "Morningstar Corporation", "posted_on": "Today", "salary": "$50 - $75 Hourly", "location": "Remote, US National"},
-{"job_role": "Senior Full Stack Software Engineer", "company": "Ether.fi", "posted_on": "Today", "salary": "$120,000 - $200,000 Annually", "location": "Hybrid Remote in New York, NY, Denver, CO"},
-{"job_role": "Graphic Designer", "company": "Washington University in St. Louis", "posted_on": "Today", "salary": "$23 - $36 Hourly", "location": "Hybrid Remote in Saint Louis, MO"},
-{"job_role": "Staff Frontend Engineer", "company": "Bazaarvoice", "posted_on": "Today", "salary": null, "location": "Hybrid Remote in Bengaluru, KA, India"},
-{"job_role": "Web UX Designer", "company": "By Winona", "posted_on": "Yesterday", "salary": null, "location": "Remote in Mexico, Colombia, Chile, Brazil, Argentina, Philippines"},
-{"job_role": "Web Experience Director", "company": null, "posted_on": "Today", "salary": "$155,000 - $195,000 Annually", "location": "Remote in Canada"},
-{"job_role": "Senior Website Performance Manager", "company": null, "posted_on": "Today", "salary": "$140,000 - $155,000 Annually", "location": "Remote, US National"},
-{"job_role": "Senior Full Stack Web Developer", "company": null, "posted_on": "Today", "salary": "60,000 GBP Annually", "location": "Remote in United Kingdom, Spain, France, Germany, Poland"},
-{"job_role": "Full Stack Developer", "company": null, "posted_on": "Today", "salary": null, "location": "Hybrid Remote in Athens, A1, Greece"},
-{"job_role": "Senior Front End Engineer - Games", "company": null, "posted_on": "Today", "salary": null, "location": "Hybrid Remote in Marousi, A1, Greece"},
-{"job_role": "Website and Demand Capture Manager", "company": null, "posted_on": "Today", "salary": "130,000 - 150,000 CAD Annually", "location": "Hybrid Remote in Canada"},
-{"job_role": "Website and Demand Capture Manager", "company": null, "posted_on": "Today", "salary": "$20,000 - $25,000 Annually", "location": "Remote in Brazil"},
-{"job_role": "Website and Demand Capture Manager", "company": null, "posted_on": "Today", "salary": "$135,000 - $150,000 Annually", "location": "Remote, US National"},
-{"job_role": "Web Content Manager", "company": null, "posted_on": "Today", "salary": "$80,000 Annually", "location": "Remote in AZ"},
-{"job_role": "Frontend Developer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in Brno, JM, Czechia"},
-{"job_role": "Support and Quality Assurance Analyst", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Remote in India"},
-{"job_role": "UI Designer", "company": null, "posted_on": "Yesterday", "salary": "$75,000 - $90,000 Annually", "location": "Remote in West Bend, WI or US National"},
-{"job_role": "Senior Full stack Software Engineer - Node.js and React", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Remote in Porto, PR, Portugal"},
-{"job_role": "Senior Full-stack Developer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Remote in United Kingdom"},
-{"job_role": "Senior - WordPress Developer", "company": null, "posted_on": "Yesterday", "salary": "$38 EUR Hourly", "location": "Remote in Poland"},
-{"job_role": "Lead UX Designer", "company": null, "posted_on": "Yesterday", "salary": "$127,700 - $163,600 Annually", "location": "Hybrid Remote in Dublin, CA"},
-{"job_role": "Javascript Developer", "company": null, "posted_on": "Yesterday", "salary": "$75,000 - $115,000 Annually", "location": "Hybrid Remote in Raleigh, NC"},
-{"job_role": "Full Stack Engineer", "company": null, "posted_on": "Yesterday", "salary": "$110,000 - $125,000 Annually", "location": "Hybrid Remote in Durham, NC"},
-{"job_role": "Software Engineer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in San Francisco, CA, New York, NY, Austin, TX"},
-{"job_role": "Websites Lead", "company": null, "posted_on": "Yesterday", "salary": null, "location": "US National  (Not hiring in AK, NY, CA, WA, CO)"},
-{"job_role": "WordPress Developer", "company": null, "posted_on": "Yesterday", "salary": "$70,000 - $75,000 Annually", "location": "Remote in AZ, CA, CO, FL, GA, HI, MS, MO, NC, NH, NV, NY, OK, SD, TN, TX, UT, WA, WY"},
-{"job_role": "WordPress Developer", "company": null, "posted_on": "Yesterday", "salary": "$70,000 - $75,000 Annually", "location": "Remote in Austin, TX"},
-{"job_role": "UI - UX designer", "company": null, "posted_on": "Yesterday", "salary": "$90,000 - $120,000 Annually", "location": "Remote in Houston, TX or US National"},
-{"job_role": "Senior Full Stack Developer - .NET and React", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in Perth, WA, Australia"},
-{"job_role": "Full Stack Engineer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in San Francisco, CA, Los Angeles, CA"},
-{"job_role": "NOAA Weather Program Office Web Designer - Developer", "company": null, "posted_on": "Yesterday", "salary": "$30 - $42 Hourly", "location": "Remote in Silver Spring, MD"},
-{"job_role": ".NET Developer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Remote, US National"},
-{"job_role": "Senior Fullstack Engineer", "company": null, "posted_on": "Yesterday", "salary": null, "location": "Hybrid Remote in Bangalore, KA, India"},
-{"job_role": "Java Analytics Developer", "company": null, "posted_on": "Yesterday", "salary": "$70 - $80 Hourly", "location": "Remote, US National"},
-{"job_role": "Java Analytics Developer", "company": null, "posted_on": "Yesterday", "salary": "$70 - $80 Hourly", "location": "Remote, US National"},
-{"job_role": "Full Stack .NET Application Developer", "company": null, "posted_on": "Yesterday", "salary": "$70,000 - $115,000 Annually", "location": "Remote, US National"},
-{"job_role": "UI Designer", "company": null, "posted_on": "Yesterday", "salary": "$75,000 - $90,000 Annually", "location": "Remote in West Bend, WI"},
-{"job_role": "Junior Software Engineer", "company": null, "posted_on": "Yesterday", "salary": "$58,000 - $115,900 Annually", "location": "Hybrid Remote in Omaha, NE, Hampton, VA"},
-{"job_role": "Lead Software Engineer - Application Development", "company": null, "posted_on": "3 days ago", "salary": null, "location": "Remote, US National"},
-{"job_role": "Senior Mobile Engineer", "company": null, "posted_on": "3 days ago", "salary": null, "location": "Hybrid Remote in Chicago, IL"},
-{"job_role": "Senior Software Engineer", "company": null, "posted_on": "3 days ago", "salary": "$215,000 - $290,000 Annually", "location": "Hybrid Remote in Redwood City, CA"},
-{"job_role": "Lead Full-Stack Software Engineer", "company": null, "posted_on": "3 days ago", "salary": "$156,200 - $265,000 Annually", "location": "Remote, US National"},
-{"job_role": "Software Development Engineer - Front End", "company": null, "posted_on": "3 days ago", "salary": "$133,900 - $242,000 Annually", "location": "Hybrid Remote in San Jose, CA"},
-{"job_role": "Staff Front End Engineer", "company": null, "posted_on": "3 days ago", "salary": "$180,000 - $250,000 Annually", "location": "Hybrid Remote in New York, NY"},
-{"job_role": "Software Engineer 1", "company": null, "posted_on": "3 days ago", "salary": null, "location": "Hybrid Remote in Washington, DC"},
-{"job_role": "Frontend Engineer", "company": null, "posted_on": "3 days ago", "salary": null, "location": "Remote, US National"},
-{"job_role": "Staff Front and Software Engineer", "company": null, "posted_on": "3 days ago", "salary": "$180,000 - $250,000 Annually", "location": "Remote, US National"}
+    {
+        "job_role": "Senior Software Engineer",
+        "company": "Grainger",
+        "posted_on": "Today",
+        "salary": "$110,500 - $184,100 Annually",
+        "location": "Hybrid Remote in Chicago, IL"
+    },
+    {
+        "job_role": "Staff Software Engineer",
+        "company": "Grainger",
+        "posted_on": "Today",
+        "salary": "$131,200 - $218,700 Annually",
+        "location": "Hybrid Remote in Chicago, IL"
+    },
+    {
+        "job_role": "Frontend Software Engineer",
+        "company": "Blueground",
+        "posted_on": "Today",
+        "salary": null,
+        "location": "Remote in Greece"
+    },
+    {
+        "job_role": "Full Stack Developer",
+        "company": "Morningstar Corporation",
+        "posted_on": "Today",
+        "salary": "$50 - $75 Hourly",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Senior Full Stack Software Engineer",
+        "company": "Ether.fi",
+        "posted_on": "Today",
+        "salary": "$120,000 - $200,000 Annually",
+        "location": "Hybrid Remote in New York, NY, Denver, CO"
+    },
+    {
+        "job_role": "Graphic Designer",
+        "company": "Washington University in St. Louis",
+        "posted_on": "Today",
+        "salary": "$23 - $36 Hourly",
+        "location": "Hybrid Remote in Saint Louis, MO"
+    },
+    {
+        "job_role": "Staff Frontend Engineer",
+        "company": "Bazaarvoice",
+        "posted_on": "Today",
+        "salary": null,
+        "location": "Hybrid Remote in Bengaluru, KA, India"
+    },
+    {
+        "job_role": "Web UX Designer",
+        "company": "By Winona",
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote in Mexico, Colombia, Chile, Brazil, Argentina, Philippines"
+    },
+    {
+        "job_role": "Web Experience Director",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$155,000 - $195,000 Annually",
+        "location": "Remote in Canada"
+    },
+    {
+        "job_role": "Senior Website Performance Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$140,000 - $155,000 Annually",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Senior Full Stack Web Developer",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "60,000 GBP Annually",
+        "location": "Remote in United Kingdom, Spain, France, Germany, Poland"
+    },
+    {
+        "job_role": "Full Stack Developer",
+        "company": null,
+        "posted_on": "Today",
+        "salary": null,
+        "location": "Hybrid Remote in Athens, A1, Greece"
+    },
+    {
+        "job_role": "Senior Front End Engineer - Games",
+        "company": null,
+        "posted_on": "Today",
+        "salary": null,
+        "location": "Hybrid Remote in Marousi, A1, Greece"
+    },
+    {
+        "job_role": "Website and Demand Capture Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "130,000 - 150,000 CAD Annually",
+        "location": "Hybrid Remote in Canada"
+    },
+    {
+        "job_role": "Website and Demand Capture Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$20,000 - $25,000 Annually",
+        "location": "Remote in Brazil"
+    },
+    {
+        "job_role": "Website and Demand Capture Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$135,000 - $150,000 Annually",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Web Content Manager",
+        "company": null,
+        "posted_on": "Today",
+        "salary": "$80,000 Annually",
+        "location": "Remote in AZ"
+    },
+    {
+        "job_role": "Frontend Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in Brno, JM, Czechia"
+    },
+    {
+        "job_role": "Support and Quality Assurance Analyst",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote in India"
+    },
+    {
+        "job_role": "UI Designer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$75,000 - $90,000 Annually",
+        "location": "Remote in West Bend, WI or US National"
+    },
+    {
+        "job_role": "Senior Full stack Software Engineer - Node.js and React",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote in Porto, PR, Portugal"
+    },
+    {
+        "job_role": "Senior Full-stack Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote in United Kingdom"
+    },
+    {
+        "job_role": "Senior - WordPress Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$38 EUR Hourly",
+        "location": "Remote in Poland"
+    },
+    {
+        "job_role": "Lead UX Designer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$127,700 - $163,600 Annually",
+        "location": "Hybrid Remote in Dublin, CA"
+    },
+    {
+        "job_role": "Javascript Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$75,000 - $115,000 Annually",
+        "location": "Hybrid Remote in Raleigh, NC"
+    },
+    {
+        "job_role": "Full Stack Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$110,000 - $125,000 Annually",
+        "location": "Hybrid Remote in Durham, NC"
+    },
+    {
+        "job_role": "Software Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in San Francisco, CA, New York, NY, Austin, TX"
+    },
+    {
+        "job_role": "Websites Lead",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "US National  (Not hiring in AK, NY, CA, WA, CO)"
+    },
+    {
+        "job_role": "WordPress Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70,000 - $75,000 Annually",
+        "location": "Remote in AZ, CA, CO, FL, GA, HI, MS, MO, NC, NH, NV, NY, OK, SD, TN, TX, UT, WA, WY"
+    },
+    {
+        "job_role": "WordPress Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70,000 - $75,000 Annually",
+        "location": "Remote in Austin, TX"
+    },
+    {
+        "job_role": "UI - UX designer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$90,000 - $120,000 Annually",
+        "location": "Remote in Houston, TX or US National"
+    },
+    {
+        "job_role": "Senior Full Stack Developer - .NET and React",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in Perth, WA, Australia"
+    },
+    {
+        "job_role": "Full Stack Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in San Francisco, CA, Los Angeles, CA"
+    },
+    {
+        "job_role": "NOAA Weather Program Office Web Designer - Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$30 - $42 Hourly",
+        "location": "Remote in Silver Spring, MD"
+    },
+    {
+        "job_role": ".NET Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Senior Fullstack Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": null,
+        "location": "Hybrid Remote in Bangalore, KA, India"
+    },
+    {
+        "job_role": "Java Analytics Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70 - $80 Hourly",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Java Analytics Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70 - $80 Hourly",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Full Stack .NET Application Developer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$70,000 - $115,000 Annually",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "UI Designer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$75,000 - $90,000 Annually",
+        "location": "Remote in West Bend, WI"
+    },
+    {
+        "job_role": "Junior Software Engineer",
+        "company": null,
+        "posted_on": "Yesterday",
+        "salary": "$58,000 - $115,900 Annually",
+        "location": "Hybrid Remote in Omaha, NE, Hampton, VA"
+    },
+    {
+        "job_role": "Lead Software Engineer - Application Development",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": null,
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Senior Mobile Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": null,
+        "location": "Hybrid Remote in Chicago, IL"
+    },
+    {
+        "job_role": "Senior Software Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$215,000 - $290,000 Annually",
+        "location": "Hybrid Remote in Redwood City, CA"
+    },
+    {
+        "job_role": "Lead Full-Stack Software Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$156,200 - $265,000 Annually",
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Software Development Engineer - Front End",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$133,900 - $242,000 Annually",
+        "location": "Hybrid Remote in San Jose, CA"
+    },
+    {
+        "job_role": "Staff Front End Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$180,000 - $250,000 Annually",
+        "location": "Hybrid Remote in New York, NY"
+    },
+    {
+        "job_role": "Software Engineer 1",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": null,
+        "location": "Hybrid Remote in Washington, DC"
+    },
+    {
+        "job_role": "Frontend Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": null,
+        "location": "Remote, US National"
+    },
+    {
+        "job_role": "Staff Front and Software Engineer",
+        "company": null,
+        "posted_on": "3 days ago",
+        "salary": "$180,000 - $250,000 Annually",
+        "location": "Remote, US National"
+    }
 ]
