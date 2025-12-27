@@ -26,7 +26,7 @@ class SpiderSpider(scrapy.Spider):
 
         for i in ol:
             items = Work1Item()
-            items['job_title'] = i.xpath('.//*[@class="listing-company-name"]/a/text()').extract()[0]
+            items['job_title'] = i.xpath('.//*[@href="listing-company-name"]/a/text()').extract()[0]
             items['location'] = i.xpath('.//*[@class="listing-location"]/a/text()').extract()[0]
             items['Skills'] = ", ".join(i.xpath('.//*[@class="listing-job-type"]/a/text()').extract())
             items['date'] = i.xpath('.//*[@class="listing-posted"]/time/text()').extract()[0]
